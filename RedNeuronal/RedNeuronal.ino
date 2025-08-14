@@ -5,11 +5,7 @@
 #include <Wire.h>
 Adafruit_MPU6050 mpu;
 
-#define CONVERT_G_TO_MS2    1.0f
-#define MAX_ACCEPTED_RANGE  25.0f  
-
-
-const float accelerationThreshold = 20; // threshold of significant in G's original 2.5
+const float accelerationThreshold = 20; 
 const int numSamples = 225;
 
 float input[numSamples*6];
@@ -36,16 +32,16 @@ void setup() {
       while (!Serial);
     delay(10); 
 
-  Serial.println("Adafruit MPU6050 test!");
+  Serial.println("Probando MPU6050");
 
   // Try to initialize!
   if (!mpu.begin()) {
-    Serial.println("Failed to find MPU6050 chip");
+    Serial.println("Error en MPU6050");
     while (1) {
       delay(10);
     }
   }
-  Serial.println("MPU6050 Found!");
+  Serial.println("MPU6050 encontrado");
 
   mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
   Serial.print("Accelerometer range set to: ");

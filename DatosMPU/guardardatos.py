@@ -1,7 +1,7 @@
 import serial
 import time
 
-# Configura el puerto serial y velocidad (ajusta según tu sistema)
+# Configura el puerto serial y velocidad 
 PORT = '/dev/ttyUSB0'
 BAUD_RATE = 115200
 FILENAME = 'Pruebas/DatosMPU/hifive.csv'
